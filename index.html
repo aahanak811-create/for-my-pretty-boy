@@ -1,0 +1,461 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Pretty Boy 💗</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  overflow:hidden;
+  font-family:"Comic Sans MS", cursive;
+  background:linear-gradient(#ffd6e8,#fff);
+}
+
+.scene{
+  display:none;
+  height:100vh;
+  text-align:center;
+  padding-top:80px;
+  position:relative;
+}
+
+.active{
+  display:block;
+}
+
+h1{
+  color:#ff4d9d;
+  font-size:40px;
+}
+
+p{
+  font-size:22px;
+  color:#555;
+}
+
+button{
+  background:#ff4d9d;
+  color:white;
+  border:none;
+  padding:15px 30px;
+  border-radius:30px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* characters */
+
+.people{
+  margin-top:40px;
+}
+
+.girl,.boy{
+  display:inline-block;
+  position:relative;
+  margin:20px;
+}
+
+.head{
+  width:80px;
+  height:80px;
+  background:#ffd2b8;
+  border-radius:50%;
+  margin:auto;
+}
+
+.body{
+  width:90px;
+  height:120px;
+  border-radius:40px;
+  margin:auto;
+}
+
+.girl .body{
+  background:#ff8fc8;
+}
+
+.boy .body{
+  background:#6bbcff;
+}
+
+.eye{
+  width:10px;
+  height:10px;
+  background:#333;
+  border-radius:50%;
+  display:inline-block;
+  margin:20px 8px;
+}
+
+.girl:after{
+  content:"🎀";
+  position:absolute;
+  top:-20px;
+  left:35px;
+  font-size:30px;
+}
+
+.boy:after{
+  content:"🧢";
+  position:absolute;
+  top:-20px;
+  left:30px;
+  font-size:30px;
+}
+
+
+/* animations */
+
+.float{
+ animation:float 2s infinite alternate;
+}
+
+@keyframes float{
+ from{transform:translateY(0)}
+ to{transform:translateY(-20px)}
+}
+
+.heart{
+ position:absolute;
+ animation:heart 5s linear infinite;
+}
+
+@keyframes heart{
+ from{
+  transform:translateY(100vh);
+ }
+ to{
+  transform:translateY(-20vh);
+ }
+}
+
+.flower{
+ position:absolute;
+ bottom:0;
+ font-size:40px;
+ animation:bloom 2s infinite alternate;
+}
+
+@keyframes bloom{
+ from{transform:scale(.5)}
+ to{transform:scale(1)}
+}
+
+
+.rain span{
+ position:absolute;
+ top:-20px;
+ animation:rain 2s linear infinite;
+}
+
+@keyframes rain{
+ to{
+  transform:translateY(100vh);
+ }
+}
+
+
+.star{
+ position:absolute;
+ animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+ from{opacity:.3}
+ to{opacity:1}
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- SCENE 1 -->
+
+<div class="scene active">
+
+<h1>Hey my pretty boy 💗</h1>
+
+<p id="typing"></p>
+
+<div class="people">
+<div class="girl float">
+<div class="head">
+<span class="eye"></span>
+<span class="eye"></span>
+</div>
+<div class="body"></div>
+</div>
+
+
+<div class="boy float">
+<div class="head">
+<span class="eye"></span>
+<span class="eye"></span>
+</div>
+<div class="body"></div>
+</div>
+</div>
+
+<button onclick="next()">Enter my little garden 🌸</button>
+
+</div>
+
+
+
+<!-- SCENE 2 -->
+
+<div class="scene">
+
+<h1>🌧 I know today feels heavy</h1>
+
+<p>
+Some days you feel tired...
+some days you don't feel like yourself.
+</p>
+
+<div style="font-size:90px">
+🌧️ 🌧️ 🌧️
+</div>
+
+<button onclick="next()">Keep going 💗</button>
+
+</div>
+
+
+
+<!-- SCENE 3 -->
+
+<div class="scene">
+
+<h1>Excuse me sir 😤💗</h1>
+
+<p>
+Who allowed you to look this cute while being sad?
+</p>
+
+<div class="people">
+
+<div class="girl float">
+<div class="head"></div>
+<div class="body"></div>
+</div>
+
+<div class="boy float">
+<div class="head"></div>
+<div class="body"></div>
+</div>
+
+</div>
+
+<button onclick="next()">Continue 🧸</button>
+
+</div>
+
+
+
+<!-- SCENE 4 -->
+
+<div class="scene">
+
+<h1>Emergency happiness delivery 🧸</h1>
+
+<p>
+One teddy + unlimited love has arrived.
+</p>
+
+<div style="font-size:100px">
+🧸💗
+</div>
+
+<button onclick="next()">Open your surprise 🌸</button>
+
+</div>
+
+
+
+<!-- SCENE 5 -->
+
+<div class="scene">
+
+<h1>🌱 Even flowers need rainy days</h1>
+
+<p>
+Bad days don't erase how amazing you are.
+</p>
+
+<div style="font-size:100px">
+🌱➡️🌸
+</div>
+
+<button onclick="next()">Next 💕</button>
+
+</div>
+
+
+
+<!-- SCENE 6 -->
+
+<div class="scene">
+
+<h1>Grrr 😤💗</h1>
+
+<p>
+You still look handsome even when you're grumpy.
+Unfortunately for you... I noticed 😌
+</p>
+
+<div style="font-size:80px">
+😒💗😏
+</div>
+
+<button onclick="next()">One more thing 🌙</button>
+
+</div>
+
+
+
+<!-- SCENE 7 -->
+
+<div class="scene">
+
+<h1>You are never alone 💗</h1>
+
+<p>
+I'll annoy you,
+tease you,
+support you,
+and love you anyway.
+</p>
+
+<div class="people">
+
+<div class="girl float">
+<div class="head"></div>
+<div class="body"></div>
+</div>
+
+<div class="boy float">
+<div class="head"></div>
+<div class="body"></div>
+</div>
+
+</div>
+
+
+<button onclick="finish()">Finish 🌸</button>
+
+</div>
+
+
+
+<script>
+
+let current=0;
+
+let scenes=document.querySelectorAll(".scene");
+
+
+function next(){
+
+scenes[current].classList.remove("active");
+
+current++;
+
+scenes[current].classList.add("active");
+
+}
+
+
+
+function finish(){
+
+document.body.style.background=
+"linear-gradient(#111,#39204f)";
+
+
+document.querySelectorAll(".scene")[current].innerHTML=
+
+`
+
+<h1 style="color:white">
+🌙 My pretty boy 💗
+</h1>
+
+<p style="color:white">
+Happy days, sad days,
+silly days and sleepy days...
+</p>
+
+<p style="color:white">
+I choose every version of you.
+</p>
+
+<div style="font-size:100px">
+🌸💗🌸
+</div>
+
+<p style="color:white">
+Forever your annoying little flower 🌷
+</p>
+
+`;
+
+
+for(let i=0;i<30;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="💗";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=
+(3+Math.random()*5)+"s";
+
+document.body.appendChild(h);
+
+}
+
+}
+
+
+// typing effect
+
+let text=
+"I heard you're having a bad day... so I made this little place just for you 🥺";
+
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(type,50);
+
+}
+
+}
+
+type();
+
+
+</script>
+
+</body>
+</html>
+```
